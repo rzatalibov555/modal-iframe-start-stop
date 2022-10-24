@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <style>
+        .pad0{
+            padding:0px!important;
+        }
+    </style>
+    <div class="container mt-3">
+        
+        <img width="150" src="https://pbs.twimg.com/profile_images/1208234904405757953/mT0cFOVQ_400x400.jpg" alt="" data-bs-toggle="modal" data-bs-target="#myModal">
+      </div>
+      
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+      
+      
+            <!-- Modal body -->
+            <div class="modal-body pad0">
+                <iframe width="100%" height="550px" src="https://www.youtube.com/embed/MQuaMlj1rXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+      
+          
+      
+          </div>
+        </div>
+      </div>
+      
+  
+      <form action="index.py" method="post">
+        <input type="text" placeholder="enter name" value="hello" readonly>
+        <button type="submit">Send</button>  
+      </form>
+
+</body>
+</html>
+
+<script>
+    $("#myModal").on('hidden.bs.modal', function (e) {
+        $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+    });
+</script>
